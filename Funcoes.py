@@ -33,7 +33,9 @@ def define_posicoes(linha, coluna, orientacao, tamanho):
 def preenche_frota(frota, nome_navio, linha, coluna, orientacao, tamanho):
       #adicionar o novo navio ao dicionario e atribuir o seu valor com a sua posicao 
       if nome_navio in frota:
+            #adiciona um novo valor caso o navio ja esteja no dicionário
             frota[nome_navio] += [define_posicoes(linha,coluna,orientacao,tamanho)]
       else:
+            #adiciona um novo navio e o seu novo valor 
             frota[nome_navio] = [define_posicoes(linha,coluna,orientacao,tamanho)]
       return frota
