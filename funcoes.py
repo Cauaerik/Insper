@@ -74,5 +74,3 @@ def posiciona_frota(frota):
                         tabuleiro[x][y] = 1
       return tabuleiro
 #teste4
-
-#teste de github
