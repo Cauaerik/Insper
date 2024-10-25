@@ -59,8 +59,8 @@ def posiciona_frota(frota):
       for navio,lista_coordenada in frota.items():
             for lista_posicao in lista_coordenada:
                   for coordenada in lista_posicao:
-                        x = frota[navio][coordenada][0]
-                        y = frota[navio][coordenada][1]
+                        x = coordenada[0]
+                        y = coordenada[1]
                         tabuleiro[x][y] = 1
       return tabuleiro
 
