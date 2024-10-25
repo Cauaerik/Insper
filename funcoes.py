@@ -70,6 +70,3 @@ def posiciona_frota(frota):
                         #atualizar a coordenada do tabuleiro para 1
                         tabuleiro[x][y] = 1
       return tabuleiro
-
-
-
