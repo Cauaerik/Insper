@@ -39,3 +39,11 @@ def preenche_frota(frota, nome_navio, linha, coluna, orientacao, tamanho):
             #adiciona um novo navio e o seu novo valor 
             frota[nome_navio] = [define_posicoes(linha,coluna,orientacao,tamanho)]
       return frota
+def faz_jogada(tabuleiro, linha, coluna):
+    if tabuleiro[linha][coluna] == 1:
+          #caso a coordenada enviada esteja ocupada: X (acerto)
+        tabuleiro[linha][coluna] = 'X'
+    elif tabuleiro[linha][coluna] == 0:
+          #caso a coordenada enviada NAO esteja ocupada: - (erro)
+        tabuleiro[linha][coluna] = '-'
+    return tabuleiro
