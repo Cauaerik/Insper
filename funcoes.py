@@ -43,5 +43,26 @@ def faz_jogada(tabuleiro,linha,coluna):
       elif tabuleiro [linha][coluna] == 0:
             tabuleiro [linha][coluna] = '-'
       return tabuleiro
+def posiciona_frota(frota):
+      tabuleiro = [
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+  ]
+      for navio,lista_coordenada in frota.items():
+            for lista_posicao in lista_coordenada:
+                  for coordenada in lista_posicao:
+                        x = coordenada[0]
+                        y = coordenada[1]
+                        tabuleiro[x][y] = 1
+      return tabuleiro
+
 
 
