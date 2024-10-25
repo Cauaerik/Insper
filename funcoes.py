@@ -47,3 +47,30 @@ def faz_jogada(tabuleiro, linha, coluna):
           #caso a coordenada enviada NAO esteja ocupada: - (erro)
         tabuleiro[linha][coluna] = '-'
     return tabuleiro
+
+def posiciona_frota(frota):
+      #tabuleiro referencia
+      tabuleiro = [
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0],
+  ]
+      #percorrer listas de posicoes nos valores do dicionario
+      for lista_posicoes in frota.values():
+            #percorrer as listas de coordenadas dentro da lista de posicoes
+            for lista_coordenadas in lista_posicoes:
+                  #percorrer as cordenadas (x,y) dentro das listas de coordenadas
+                  for coordenada in lista_coordenadas:
+                        x = coordenada[0]
+                        y = coordenada[1]
+                        #atualizar a coordenada do tabuleiro para 1
+                        tabuleiro[x][y] = 1
+      return tabuleiro
+#teste4
