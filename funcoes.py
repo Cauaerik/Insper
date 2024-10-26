@@ -73,4 +73,18 @@ def posiciona_frota(frota):
                         #atualizar a coordenada do tabuleiro para 1
                         tabuleiro[x][y] = 1
       return tabuleiro
-#teste4
+
+def afundados(frota,tabuleiro):
+      embarcacoes_afundadas = 0
+      for lista_posicoes in frota.values():
+          for lista_coordenadas in lista_posicoes:
+              for coordenada in lista_coordenadas:
+                  cont = 0
+                  if tabuleiro[coordenada] == 'X':
+                      cont += 1
+                      if cont == len(lista_coordenadas):
+                          embarcacoes_afundadas += 1
+      return embarcacoes_afundadas
+                      
+
+    
