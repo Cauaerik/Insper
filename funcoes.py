@@ -81,12 +81,12 @@ def afundados(frota,tabuleiro):
       for lista_posicoes in frota.values():
           #percorrer as listas de coordenadas dentro da lista de posicoes
           for lista_coordenadas in lista_posicoes:
+              #declarar uma variavel auxiliar que conta quantas coordenadas que a embarcacao ocupa foram atingidas
+              cont = 0
               #percorrer as cordenadas (x,y) dentro das listas de coordenadas
               for coordenada in lista_coordenadas:
                   x = coordenada[0]
                   y = coordenada[1]
-                  #declarar uma variavel auxiliar que conta quantas coordenadas que a embarcacao ocupa foram atingidas
-                  cont = 0
                   if tabuleiro[x][y] == 'X':
                       #atualiza a variavel auxiliar para cada coordenada atingida (X)
                       cont += 1
