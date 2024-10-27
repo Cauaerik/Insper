@@ -105,7 +105,7 @@ def posicao_valida(frota,linha,coluna,orientacao,tamanho):
                   x = coordenada[0]
                   y = coordenada[1]
                   for coord_novo in navio_novo:
-                        if coord_novo[0] > 9 or coord_novo[1] > 9:
+                        if coord_novo[0] > 8 or coord_novo[1] > 9:
                             return False
                         if coord_novo[0] == x and coord_novo[1] == y:
                             return False
