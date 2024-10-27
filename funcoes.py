@@ -96,9 +96,10 @@ def afundados(frota,tabuleiro):
       return embarcacoes_afundadas
 def posicao_valida(frota,linha,coluna,orientacao,tamanho):
       navio_novo = define_posicoes(linha,coluna,orientacao,tamanho)
-      if navio_novo in frota.values():
-            return False
-      else:
-            return True
+      for valores in frota.values():
+            if navio_novo in valores:
+                  return False
+            else:
+                  return True
 
     
