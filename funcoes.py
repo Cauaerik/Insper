@@ -99,9 +99,9 @@ def posicao_valida(frota,linha,coluna,orientacao,tamanho):
       if orientacao == "vertical":
             if (linha + tamanho) > 10:
                   return False
-            if orientacao == "horizontal":
-                        if (coluna + tamanho) > 10:
-                              return False
+      if orientacao == "horizontal":
+            if (coluna + tamanho) > 10:
+                  return False
       #percorrer listas de posicoes nos valores do dicionario
       for lista_posicoes in frota.values():
           #percorrer as listas de coordenadas dentro da lista de posicoes
