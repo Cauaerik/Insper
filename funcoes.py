@@ -96,6 +96,12 @@ def afundados(frota,tabuleiro):
       return embarcacoes_afundadas
 def posicao_valida(frota,linha,coluna,orientacao,tamanho):
       navio_novo = define_posicoes(linha,coluna,orientacao,tamanho)
+      if orientacao == "vertical":
+            if (linha + tamanho) > 10:
+                  return False
+            if orientacao == "horizontal":
+                        if (coluna + tamanho) > 10:
+                              return False
       #percorrer listas de posicoes nos valores do dicionario
       for lista_posicoes in frota.values():
           #percorrer as listas de coordenadas dentro da lista de posicoes
@@ -105,12 +111,6 @@ def posicao_valida(frota,linha,coluna,orientacao,tamanho):
                   x = coordenada[0]
                   y = coordenada[1]
                   for coord_novo in navio_novo:
-                        if orientacao == "vertical":
-                            if (linha + tamanho) > 10:
-                              return False
-                        if orientacao == "horizontal":
-                            if (coluna + tamanho) > 10:
-                                return False
                         if coord_novo[0] == x and coord_novo[1] == y:
                             return False
 
