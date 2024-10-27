@@ -97,7 +97,7 @@ def afundados(frota,tabuleiro):
 def posicao_valida(frota,linha,coluna,orientacao,tamanho):
       navio_novo = define_posicoes(linha,coluna,orientacao,tamanho)
       for valores in frota.values():
-            if navio_novo in valores:
+            if navio_novo == valores:
                   return False
             else:
                   return True
