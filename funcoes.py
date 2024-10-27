@@ -39,6 +39,7 @@ def preenche_frota(frota, nome_navio, linha, coluna, orientacao, tamanho):
             #adiciona um novo navio e o seu novo valor 
             frota[nome_navio] = [define_posicoes(linha,coluna,orientacao,tamanho)]
       return frota
+
 def faz_jogada(tabuleiro, linha, coluna):
     if tabuleiro[linha][coluna] == 1:
           #caso a coordenada enviada esteja ocupada: X (acerto)
@@ -81,7 +82,7 @@ def afundados(frota,tabuleiro):
       for lista_posicoes in frota.values():
           #percorrer as listas de coordenadas dentro da lista de posicoes
           for lista_coordenadas in lista_posicoes:
-              #decla'rar uma variavel auxiliar que conta quantas coordenadas que a embarcacao ocupa foram atingidas
+              #declarar uma variavel auxiliar que conta quantas coordenadas que a embarcacao ocupa foram atingidas
               cont = 0
               #percorrer as cordenadas (x,y) dentro das listas de coordenadas
               for coordenada in lista_coordenadas:
@@ -115,7 +116,4 @@ def posicao_valida(frota,linha,coluna,orientacao,tamanho):
                             return False
 
       return True
-                  
-      
-
     
